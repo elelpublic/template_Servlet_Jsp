@@ -3,7 +3,7 @@
 		<title>Welcome</title>
 	</head>
 	<body>
-		<h1>Hello World.</h1>
+		<h1>Hello World. (JSP)</h1>
 
         		<p>
 				<%
@@ -13,7 +13,7 @@
         		</p>
 
         		<p>
-        		Also say <a href="hello">hello</a>!
+        		Also say hello to the <a href="hello">servlet</a>!
         		</p>
 
         		<hr>
@@ -25,7 +25,7 @@
                     <td> session </td><td> <%= session %> </td>
                 </tr>
                 <tr>
-                    <td> username </td><td> <%= session.getAttribute("username") %> </td>
+                    <td> value </td><td> <%= session.getAttribute("value") %> </td>
                 </tr>
                 </table>
 

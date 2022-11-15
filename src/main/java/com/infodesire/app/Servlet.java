@@ -77,8 +77,9 @@ public class Servlet extends HttpServlet {
 
     // Actual logic goes here.
     PrintWriter out = response.getWriter();
-    out.println("<h1>Hello World</h1>");
-    out.println("Sent from servlet");
+    out.println("<h1>Hello World (Servlet)</h1>");
+
+    out.println("<p>Go to <a href=\"/app\">JSP</a></p>");
 
     HttpSession session = request.getSession();
 
