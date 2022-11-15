@@ -1,0 +1,75 @@
+<ivy-module version="2.0">
+
+    <info organisation="com.infodesire"
+          module="sampleApp"/>
+
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency org="junit" name="junit" rev="${junit.version}"/>
+
+        <!--
+        https://mvnrepository.com/artifact/org.hamcrest/hamcrest
+
+        Hamcrest is used by junit4
+        -->
+        <dependency org="org.hamcrest" name="hamcrest" rev="${hamcrest.version}"/>
+
+        <!--
+        https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+
+        We use this library only to show how to include thirdparty libs in the build process
+        -->
+        <dependency org="org.apache.commons" name="commons-lang3" rev="${commons-lang3.version}"/>
+
+        <!--
+        https://mvnrepository.com/artifact/org.apache.groovy/groovy
+
+        We use groovy only to perform script tasks in the ant build script
+        -->
+        <dependency org="org.apache.groovy" name="groovy" rev="${groovy.version}"/>
+
+
+        <!--
+        https://mvnrepository.com/artifact/commons-cli/commons-cli
+
+        Easy command line parameter support.
+        -->
+        <dependency org="commons-cli" name="commons-cli" rev="${commons-cli.version}"/>
+
+        <!--
+        https://mvnrepository.com/artifact/org.pcollections/pcollections
+
+        Persistent collections
+        -->
+        <!-- not used yet!?
+        <dependency org="org.pcollections" name="pcollections" rev="4.0.1"/>
+        -->
+
+        <!--
+        https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+
+        Logging abstraction
+        -->
+        <dependency org="org.slf4j" name="slf4j-api" rev="${slf4j.version}"/>
+        <dependency org="org.slf4j" name="slf4j-simple" rev="${slf4j.version}"/>
+
+        <!--
+        https://mvnrepository.com/artifact/org.apache.tomcat/tomcat
+
+        Setup 2+ application servers to communicate among them
+        -->
+        <dependency org="org.apache.tomcat" name="tomcat" rev="${tomcat.version}">
+            <artifact name="tomcat" type="zip" ext="zip"/>
+        </dependency>
+
+        <!--
+        https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+
+        Servlet api, for compiling only
+        -->
+        <dependency org="javax.servlet" name="javax.servlet-api" rev="${javax.servlet-api.version}"/>
+
+    </dependencies>
+
+</ivy-module>
