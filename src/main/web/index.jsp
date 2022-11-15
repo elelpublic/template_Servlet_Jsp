@@ -16,5 +16,20 @@
         		Also say <a href="hello">hello</a>!
         		</p>
 
+        		<hr>
+
+        		<p>
+
+                <table border=1>
+                <tr>
+                    <td> session </td><td> <%= session %> </td>
+                </tr>
+                <tr>
+                    <td> username </td><td> <%= session.getAttribute("username") %> </td>
+                </tr>
+                </table>
+
+        		</p>
+
 	</body>
 </html>
