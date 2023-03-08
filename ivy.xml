@@ -52,7 +52,9 @@
         Logging abstraction
         -->
         <dependency org="org.slf4j" name="slf4j-api" rev="${slf4j.version}"/>
-        <dependency org="org.slf4j" name="slf4j-simple" rev="${slf4j.version}"/>
+        <!-- <dependency org="org.slf4j" name="slf4j-simple" rev="${slf4j.version}"/> -->
+        <dependency org="org.apache.logging.log4j" name="log4j-slf4j-impl" rev="${log4j-slf4j.version}"/>
+        <dependency org="org.apache.logging.log4j" name="log4j-core" rev="${log4j.version}"/>
 
         <!--
         https://mvnrepository.com/artifact/org.apache.tomcat/tomcat

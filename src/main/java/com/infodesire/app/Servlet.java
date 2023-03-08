@@ -57,6 +57,8 @@ public class Servlet extends HttpServlet {
 
       HttpSession session = request.getSession();
       session.setAttribute( "value", value );
+      logger.info( "Received value: " + value );
+      logger.info( "(Active logger: " + logger.getClass() + ")" );
 
     }
 

@@ -10,16 +10,29 @@
             <pathelement location="lib/commons-lang3-${commons-lang3.version}.jar" />
             <pathelement location="lib/commons-cli-${commons-cli.version}.jar" />
             <pathelement location="lib/slf4j-api-${slf4j.version}.jar" />
+            <!--
             <pathelement location="lib/slf4j-simple-${slf4j.version}.jar" />
+            -->
+            <pathelement location="lib/log4j-slf4j-impl-${log4j-slf4j.version}.jar" />
             <pathelement location="lib/javax.servlet-api-${javax.servlet-api.version}.jar" />
+            <pathelement location="lib/log4j-core-${log4j.version}.jar" />
         </path>
 
         <fileset dir="lib" id="thirdparty.jarfiles">
             <include name="commons-lang3-${commons-lang3.version}.jar" />
             <include name="commons-cli-${commons-cli.version}.jar" />
             <include name="slf4j-api-${slf4j.version}.jar" />
+            <!--
             <include name="slf4j-simple-${slf4j.version}.jar" />
+            -->
+            <include name="log4j-slf4j-impl-${log4j-slf4j.version}.jar" />
+            <include name="log4j-core-${log4j.version}.jar" />
         </fileset>
+
+        <path id="junit.jars">
+            <pathelement location="lib/junit-${junit.version}.jar" />
+            <pathelement location="lib/hamcrest-${hamcrest.version}.jar" />
+        </path>
 
     </target>
 
@@ -73,6 +86,7 @@
             >
             <src path="src/test/java" />
             <classpath refid="thirdparty.jars" />
+            <classpath refid="junit.jars" />
             <classpath>
                 <pathelement path="target/classes" />
             </classpath>
@@ -85,6 +99,7 @@
             >
             <src path="src/integration/java" />
             <classpath refid="thirdparty.jars" />
+            <classpath refid="junit.jars" />
             <classpath>
                 <pathelement path="target/classes" />
             </classpath>
