@@ -28,7 +28,7 @@
         We use groovy only to perform script tasks in the ant build script
         -->
         <dependency org="org.apache.groovy" name="groovy" rev="${groovy.version}"/>
-
+        <dependency org="org.apache.groovy" name="groovy-ant" rev="${groovy.version}"/>
 
         <!--
         https://mvnrepository.com/artifact/commons-cli/commons-cli
